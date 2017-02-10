@@ -1,0 +1,9 @@
+/* 
+  Localization.strings
+  Battery Saver
+
+  Created by Jérémy Kerbidi on 30/11/2016.
+  Copyright © 2016 Jérémy Kerbidi. All rights reserved.
+*/
+
+"what" = "Hello World !";

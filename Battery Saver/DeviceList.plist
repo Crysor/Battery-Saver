@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>iPhone1,1</key>
+	<dict>
+		<key>version</key>
+		<real>1.1</real>
+		<key>name</key>
+		<string>iPhone 2G</string>
+	</dict>
+	<key>iPhone1,2</key>
+	<dict>
+		<key>version</key>
+		<real>1.2</real>
+		<key>name</key>
+		<string>iPhone 3G</string>
+	</dict>
+	<key>iPhone2,1</key>
+	<dict>
+		<key>version</key>
+		<real>2.1</real>
+		<key>name</key>
+		<string>iPhone 3GS</string>
+	</dict>
+	<key>iPhone3,1</key>
+	<dict>
+		<key>version</key>
+		<real>3.1</real>
+		<key>name</key>
+		<string>iPhone 4 (GSM)</string>
+	</dict>
+	<key>iPhone3,2</key>
+	<dict>
+		<key>version</key>
+		<real>3.2</real>
+		<key>name</key>
+		<string>iPhone 4 (GSM Rev. A)</string>
+	</dict>
+	<key>iPhone3,3</key>
+	<dict>
+		<key>version</key>
+		<real>3.3</real>
+		<key>name</key>
+		<string>iPhone 4 (CDMA)</string>
+	</dict>
+	<key>iPhone4,1</key>
+	<dict>
+		<key>version</key>
+		<real>4.1</real>
+		<key>name</key>
+		<string>iPhone 4S</string>
+	</dict>
+	<key>iPhone5,1</key>
+	<dict>
+		<key>version</key>
+		<real>5.1</real>
+		<key>name</key>
+		<string>iPhone 5 (GSM)</string>
+	</dict>
+	<key>iPhone5,2</key>
+	<dict>
+		<key>CPU</key>
+		<string>A7 - 1.3 Ghz</string>
+		<key>weight</key>
+		<string>112 g</string>
+		<key>screen_size</key>
+		<string>4&quot;</string>
+		<key>size</key>
+		<string>123.8 x 58.6 x 7.6</string>
+		<key>resolution</key>
+		<string>1 136 x 640</string>
+		<key>cam_front</key>
+		<string>1,2 Mpx</string>
+		<key>cam</key>
+		<string>8 Mpx</string>
+		<key>battery</key>
+		<string>1570 mAh</string>
+		<key>version</key>
+		<real>5.2</real>
+		<key>name</key>
+		<string>iPhone 5 (Global)</string>
+	</dict>
+	<key>iPhone5,3</key>
+	<dict>
+		<key>battery</key>
+		<string>1570 mAh</string>
+		<key>cam</key>
+		<string>8 Mpx</string>
+		<key>cam_front</key>
+		<string>1,2 Mpx</string>
+		<key>resolution</key>
+		<string>1 136 x 640</string>
+		<key>size</key>
+		<string>123.8 x 58.6 x 7.6</string>
+		<key>screen_size</key>
+		<string>4&quot;</string>
+		<key>weight</key>
+		<string>112 g</string>
+		<key>CPU</key>
+		<string>A7 - 1.3 Ghz</string>
+		<key>version</key>
+		<real>5.3</real>
+		<key>name</key>
+		<string>iPhone 5c (GSM)</string>
+	</dict>
+	<key>iPhone5,4</key>
+	<dict>
+		<key>CPU</key>
+		<string>A7 - 1.3 Ghz</string>
+		<key>weight</key>
+		<string>112 g</string>
+		<key>screen_size</key>
+		<string>4&quot;</string>
+		<key>size</key>
+		<string>123.8 x 58.6 x 7.6</string>
+		<key>resolution</key>
+		<string>1 136 x 640</string>
+		<key>cam_front</key>
+		<string>1,2 Mpx</string>
+		<key>cam</key>
+		<string>8 Mpx</string>
+		<key>battery</key>
+		<string>1570 mAh</string>
+		<key>version</key>
+		<real>5.4</real>
+		<key>name</key>
+		<string>iPhone 5c (Global)</string>
+	</dict>
+	<key>iPhone6,1</key>
+	<dict>
+		<key>battery</key>
+		<string>1570 mAh</string>
+		<key>cam</key>
+		<string>8 Mpx</string>
+		<key>cam_front</key>
+		<string>1,2 Mpx</string>
+		<key>resolution</key>
+		<string>1 136 x 640</string>
+		<key>size</key>
+		<string>123.8 x 58.6 x 7.6</string>
+		<key>screen_size</key>
+		<string>4&quot;</string>
+		<key>weight</key>
+		<string>112 g</string>
+		<key>CPU</key>
+		<string>A7 - 1.3 Ghz</string>
+		<key>version</key>
+		<real>6.1</real>
+		<key>name</key>
+		<string>iPhone 5s (GSM)</string>
+	</dict>
+	<key>iPhone6,2</key>
+	<dict>
+		<key>CPU</key>
+		<string>A7 - 1.3 Ghz</string>
+		<key>weight</key>
+		<string>112 g</string>
+		<key>screen_size</key>
+		<string>4&quot;</string>
+		<key>size</key>
+		<string>123.8 x 58.6 x 7.6</string>
+		<key>resolution</key>
+		<string>1 136 x 640</string>
+		<key>cam_front</key>
+		<string>1,2 Mpx</string>
+		<key>cam</key>
+		<string>8 Mpx</string>
+		<key>battery</key>
+		<string>1570 mAh</string>
+		<key>version</key>
+		<real>6.2</real>
+		<key>name</key>
+		<string>iPhone 5s (Global)</string>
+	</dict>
+	<key>iPhone7,1</key>
+	<dict>
+		<key>battery</key>
+		<string>2915 mAh</string>
+		<key>cam</key>
+		<string>8 Mpx</string>
+		<key>cam_front</key>
+		<string>1.2 Mpx</string>
+		<key>resolution</key>
+		<string>1920 x 1080</string>
+		<key>size</key>
+		<string>158.1 x 77.8 x 7.1</string>
+		<key>screen_size</key>
+		<string>5.5&quot;</string>
+		<key>weight</key>
+		<string>172 g</string>
+		<key>CPU</key>
+		<string>A8 - 1.4 GHz</string>
+		<key>version</key>
+		<real>7.1</real>
+		<key>name</key>
+		<string>iPhone 6 Plus</string>
+	</dict>
+	<key>iPhone7,2</key>
+	<dict>
+		<key>CPU</key>
+		<string>A8 - 1.4 GHz</string>
+		<key>weight</key>
+		<string>129 g</string>
+		<key>screen_size</key>
+		<string>4.7&quot;</string>
+		<key>size</key>
+		<string>138.1 x 67 x 6.9</string>
+		<key>resolution</key>
+		<string>1 334 x 750</string>
+		<key>cam_front</key>
+		<string>1.2 Mpx</string>
+		<key>cam</key>
+		<string>8 Mpx</string>
+		<key>battery</key>
+		<string>1810 mAh</string>
+		<key>version</key>
+		<real>7.2</real>
+		<key>name</key>
+		<string>iPhone 6</string>
+	</dict>
+	<key>iPhone8,1</key>
+	<dict>
+		<key>battery</key>
+		<string>1715 mAh</string>
+		<key>cam</key>
+		<string>12 Mpx</string>
+		<key>cam_front</key>
+		<string>5 Mpx</string>
+		<key>resolution</key>
+		<string>1 334 x 750</string>
+		<key>size</key>
+		<string>138.3 x 67.1 x 7.1</string>
+		<key>screen_size</key>
+		<string>4.7&quot;</string>
+		<key>weight</key>
+		<string>143 g</string>
+		<key>CPU</key>
+		<string>A9 - 1.85 GHz </string>
+		<key>version</key>
+		<real>8.1</real>
+		<key>name</key>
+		<string>iPhone 6s</string>
+	</dict>
+	<key>iPhone8,2</key>
+	<dict>
+		<key>CPU</key>
+		<string>A9 - 1.85 GHz</string>
+		<key>screen_size</key>
+		<string>5.5&quot;</string>
+		<key>size</key>
+		<string>158.2 x 77.9 x 7.3</string>
+		<key>resolution</key>
+		<string>1 920 x 1 080</string>
+		<key>cam_front</key>
+		<string>5 Mpx</string>
+		<key>cam</key>
+		<string>12 Mpx</string>
+		<key>battery</key>
+		<string>2750 mAh</string>
+		<key>weight</key>
+		<string>192 g</string>
+		<key>version</key>
+		<real>8.199999999999999</real>
+		<key>name</key>
+		<string>iPhone 6s Plus</string>
+	</dict>
+	<key>iPhone8,4</key>
+	<dict>
+		<key>weight</key>
+		<string>113 g</string>
+		<key>battery</key>
+		<string>1624 mAh</string>
+		<key>cam</key>
+		<string>12 Mpx</string>
+		<key>cam_front</key>
+		<string>1.2 Mpx</string>
+		<key>resolution</key>
+		<string>1 136 x 640</string>
+		<key>size</key>
+		<string>123.8 x 58.6 x 7.6</string>
+		<key>screen_size</key>
+		<string>4&quot;</string>
+		<key>CPU</key>
+		<string>A9 - 1.85 GHz</string>
+		<key>version</key>
+		<real>8.4</real>
+		<key>name</key>
+		<string>iPhone SE</string>
+	</dict>
+	<key>iPhone9,1</key>
+	<dict>
+		<key>CPU</key>
+		<string>A10 - 2 GHz</string>
+		<key>screen_size</key>
+		<string>4.7&quot;</string>
+		<key>size</key>
+		<string>138.3 x 67.1 x 7.1</string>
+		<key>resolution</key>
+		<string>1 334 x 750</string>
+		<key>cam_front</key>
+		<string>7 Mpx</string>
+		<key>cam</key>
+		<string>12 Mpx</string>
+		<key>battery</key>
+		<string>1960 mAh</string>
+		<key>weight</key>
+		<string>138 g</string>
+		<key>version</key>
+		<real>9.1</real>
+		<key>name</key>
+		<string>iPhone 7</string>
+	</dict>
+	<key>iPhone9,2</key>
+	<dict>
+		<key>weight</key>
+		<string>188 g</string>
+		<key>battery</key>
+		<string>2900 mAh</string>
+		<key>cam</key>
+		<string>12 Mpx</string>
+		<key>cam_front</key>
+		<string>7 Mpx</string>
+		<key>resolution</key>
+		<string>1 334 x 750</string>
+		<key>size</key>
+		<string>158.2 x 77.9 x 7.3</string>
+		<key>screen_size</key>
+		<string>5.5&quot;</string>
+		<key>CPU</key>
+		<string>A10 - 2 GHz</string>
+		<key>version</key>
+		<real>9.199999999999999</real>
+		<key>name</key>
+		<string>iPhone 7 Plus</string>
+	</dict>
+	<key>iPhone9,3</key>
+	<dict>
+		<key>weight</key>
+		<string>138 g</string>
+		<key>battery</key>
+		<string>1960 mAh</string>
+		<key>cam</key>
+		<string>12 Mpx</string>
+		<key>cam_front</key>
+		<string>7 Mpx</string>
+		<key>resolution</key>
+		<string>1 334 x 750</string>
+		<key>size</key>
+		<string>138.3 x 67.1 x 7.1</string>
+		<key>screen_size</key>
+		<string>4.7&quot;</string>
+		<key>CPU</key>
+		<string>A10 - 2 GHz</string>
+		<key>version</key>
+		<real>9.300000000000001</real>
+		<key>name</key>
+		<string>iPhone 7</string>
+	</dict>
+	<key>iPhone9,4</key>
+	<dict>
+		<key>CPU</key>
+		<string>A10 - 2 GHz</string>
+		<key>screen_size</key>
+		<string>5.5&quot;</string>
+		<key>size</key>
+		<string>158.2 x 77.9 x 7.3</string>
+		<key>resolution</key>
+		<string>1 334 x 750</string>
+		<key>cam_front</key>
+		<string>7 Mpx</string>
+		<key>cam</key>
+		<string>12 Mpx</string>
+		<key>battery</key>
+		<string>2900 mAh</string>
+		<key>weight</key>
+		<string>188 g</string>
+		<key>version</key>
+		<real>9.4</real>
+		<key>name</key>
+		<string>iPhone 7 Plus</string>
+	</dict>
+	<key>iPod1,1</key>
+	<dict>
+		<key>version</key>
+		<real>1.1</real>
+		<key>name</key>
+		<string>iPod Touch (1 Gen)</string>
+	</dict>
+	<key>iPod2,1</key>
+	<dict>
+		<key>version</key>
+		<real>2.1</real>
+		<key>name</key>
+		<string>iPod Touch (2 Gen)</string>
+	</dict>
+	<key>iPod3,1</key>
+	<dict>
+		<key>version</key>
+		<real>3.1</real>
+		<key>name</key>
+		<string>iPod Touch (3 Gen)</string>
+	</dict>
+	<key>iPod4,1</key>
+	<dict>
+		<key>version</key>
+		<real>4.1</real>
+		<key>name</key>
+		<string>iPod Touch (4 Gen)</string>
+	</dict>
+	<key>iPod5,1</key>
+	<dict>
+		<key>version</key>
+		<real>5.1</real>
+		<key>name</key>
+		<string>iPod Touch (5 Gen)</string>
+	</dict>
+	<key>iPod7,1</key>
+	<dict>
+		<key>version</key>
+		<real>7.1</real>
+		<key>name</key>
+		<string>iPod Touch (6 Gen)</string>
+	</dict>
+	<key>iPad1,1</key>
+	<dict>
+		<key>version</key>
+		<real>1.1</real>
+		<key>name</key>
+		<string>iPad (WiFi)</string>
+	</dict>
+	<key>iPad1,2</key>
+	<dict>
+		<key>version</key>
+		<real>1.2</real>
+		<key>name</key>
+		<string>iPad 3G</string>
+	</dict>
+	<key>iPad2,1</key>
+	<dict>
+		<key>version</key>
+		<real>2.1</real>
+		<key>name</key>
+		<string>iPad 2 (WiFi)</string>
+	</dict>
+	<key>iPad2,2</key>
+	<dict>
+		<key>version</key>
+		<real>2.2</real>
+		<key>name</key>
+		<string>iPad 2 (GSM)</string>
+	</dict>
+	<key>iPad2,3</key>
+	<dict>
+		<key>version</key>
+		<real>2.3</real>
+		<key>name</key>
+		<string>iPad 2 (CDMA)</string>
+	</dict>
+	<key>iPad2,4</key>
+	<dict>
+		<key>version</key>
+		<real>2.4</real>
+		<key>name</key>
+		<string>iPad 2 (WiFi Rev. A)</string>
+	</dict>
+	<key>iPad2,5</key>
+	<dict>
+		<key>version</key>
+		<real>2.5</real>
+		<key>name</key>
+		<string>iPad Mini (WiFi)</string>
+	</dict>
+	<key>iPad2,6</key>
+	<dict>
+		<key>version</key>
+		<real>2.6</real>
+		<key>name</key>
+		<string>iPad Mini (GSM)</string>
+	</dict>
+	<key>iPad2,7</key>
+	<dict>
+		<key>version</key>
+		<real>2.7</real>
+		<key>name</key>
+		<string>iPad Mini (CDMA)</string>
+	</dict>
+	<key>iPad3,1</key>
+	<dict>
+		<key>version</key>
+		<real>3.1</real>
+		<key>name</key>
+		<string>iPad 3 (WiFi)</string>
+	</dict>
+	<key>iPad3,2</key>
+	<dict>
+		<key>version</key>
+		<real>3.2</real>
+		<key>name</key>
+		<string>iPad 3 (CDMA)</string>
+	</dict>
+	<key>iPad3,3</key>
+	<dict>
+		<key>version</key>
+		<real>3.3</real>
+		<key>name</key>
+		<string>iPad 3 (Global)</string>
+	</dict>
+	<key>iPad3,4</key>
+	<dict>
+		<key>version</key>
+		<real>3.4</real>
+		<key>name</key>
+		<string>iPad 4 (WiFi)</string>
+	</dict>
+	<key>iPad3,5</key>
+	<dict>
+		<key>version</key>
+		<real>3.5</real>
+		<key>name</key>
+		<string>iPad 4 (CDMA)</string>
+	</dict>
+	<key>iPad3,6</key>
+	<dict>
+		<key>version</key>
+		<real>3.6</real>
+		<key>name</key>
+		<string>iPad 4 (Global)</string>
+	</dict>
+	<key>iPad4,1</key>
+	<dict>
+		<key>version</key>
+		<real>4.1</real>
+		<key>name</key>
+		<string>iPad Air (WiFi)</string>
+	</dict>
+	<key>iPad4,2</key>
+	<dict>
+		<key>version</key>
+		<real>4.2</real>
+		<key>name</key>
+		<string>iPad Air (WiFi+GSM)</string>
+	</dict>
+	<key>iPad4,3</key>
+	<dict>
+		<key>version</key>
+		<real>4.3</real>
+		<key>name</key>
+		<string>iPad Air (WiFi+CDMA)</string>
+	</dict>
+	<key>iPad4,4</key>
+	<dict>
+		<key>version</key>
+		<real>4.4</real>
+		<key>name</key>
+		<string>iPad Mini Retina (WiFi)</string>
+	</dict>
+	<key>iPad4,5</key>
+	<dict>
+		<key>version</key>
+		<real>4.5</real>
+		<key>name</key>
+		<string>iPad Mini Retina (WiFi+CDMA)</string>
+	</dict>
+	<key>iPad4,6</key>
+	<dict>
+		<key>version</key>
+		<real>4.6</real>
+		<key>name</key>
+		<string>iPad Mini Retina (Wi-Fi + Cellular CN)</string>
+	</dict>
+	<key>iPad4,7</key>
+	<dict>
+		<key>version</key>
+		<real>4.7</real>
+		<key>name</key>
+		<string>iPad Mini 3 (Wi-Fi)</string>
+	</dict>
+	<key>iPad4,8</key>
+	<dict>
+		<key>version</key>
+		<real>4.8</real>
+		<key>name</key>
+		<string>iPad Mini 3 (Wi-Fi + Cellular)</string>
+	</dict>
+	<key>iPad4,9</key>
+	<dict>
+		<key>version</key>
+		<real>4.9</real>
+		<key>name</key>
+		<string>iPad mini 3 (Wi-Fi/Cellular, China)</string>
+	</dict>
+	<key>iPad5,1</key>
+	<dict>
+		<key>version</key>
+		<real>5.1</real>
+		<key>name</key>
+		<string>iPad mini 4 (Wi-Fi Only)</string>
+	</dict>
+	<key>iPad5,2</key>
+	<dict>
+		<key>version</key>
+		<real>5.2</real>
+		<key>name</key>
+		<string>iPad mini 4 (Wi-Fi/Cellular)</string>
+	</dict>
+	<key>iPad5,3</key>
+	<dict>
+		<key>version</key>
+		<real>5.3</real>
+		<key>name</key>
+		<string>iPad Air 2 (Wi-Fi)</string>
+	</dict>
+	<key>iPad5,4</key>
+	<dict>
+		<key>version</key>
+		<real>5.4</real>
+		<key>name</key>
+		<string>iPad Air 2 (Wi-Fi + Cellular)</string>
+	</dict>
+	<key>iPad6,3</key>
+	<dict>
+		<key>CPU</key>
+		<string>A9X - 2 GHz</string>
+		<key>screen_size</key>
+		<string>9.7&quot;</string>
+		<key>size</key>
+		<string>240 x 169.5 x 6.1</string>
+		<key>resolution</key>
+		<string>2 048 x 1 536</string>
+		<key>cam_front</key>
+		<string>5 Mpx</string>
+		<key>cam</key>
+		<string>12 Mpx</string>
+		<key>battery</key>
+		<string>7306 mAh</string>
+		<key>weight</key>
+		<string>437 g</string>
+		<key>version</key>
+		<real>6.3</real>
+		<key>name</key>
+		<string>iPad Pro 9.7-inch (Wi-Fi Only)</string>
+	</dict>
+	<key>iPad6,4</key>
+	<dict>
+		<key>weight</key>
+		<string>444 g</string>
+		<key>battery</key>
+		<string>7306 mAh</string>
+		<key>cam</key>
+		<string>12 Mpx</string>
+		<key>cam_front</key>
+		<string>5 Mpx</string>
+		<key>resolution</key>
+		<string>2 048 x 1 536</string>
+		<key>size</key>
+		<string>240 x 169.5 x 6.1</string>
+		<key>screen_size</key>
+		<string>9.7&quot;</string>
+		<key>CPU</key>
+		<string>A9X - 2 GHz</string>
+		<key>version</key>
+		<real>6.4</real>
+		<key>name</key>
+		<string>iPad Pro 9.7-inch (Wi-Fi + Cellular)</string>
+	</dict>
+	<key>iPad6,7</key>
+	<dict>
+		<key>CPU</key>
+		<string>A9X - 2 GHz</string>
+		<key>screen_size</key>
+		<string>12.9&quot;</string>
+		<key>size</key>
+		<string>305.7 x 220.6 x 6.9</string>
+		<key>resolution</key>
+		<string>2 732 x 2 048</string>
+		<key>cam_front</key>
+		<string>5 Mpx</string>
+		<key>cam</key>
+		<string>12 Mpx</string>
+		<key>battery</key>
+		<string>7 306 mAh</string>
+		<key>weight</key>
+		<string>713 g</string>
+		<key>version</key>
+		<real>6.7</real>
+		<key>name</key>
+		<string>iPad Pro (Wi-Fi Only)</string>
+	</dict>
+	<key>iPad6,8</key>
+	<dict>
+		<key>weight</key>
+		<string>723 g</string>
+		<key>battery</key>
+		<string>7 306 mAh</string>
+		<key>cam</key>
+		<string>12 Mpx</string>
+		<key>cam_front</key>
+		<string>5 Mpx</string>
+		<key>resolution</key>
+		<string>2 732 x 2 048</string>
+		<key>size</key>
+		<string>305.7 x 220.6 x 6.9</string>
+		<key>screen_size</key>
+		<string>12.9&quot;</string>
+		<key>CPU</key>
+		<string>A9X - 2 GHz</string>
+		<key>version</key>
+		<real>6.8</real>
+		<key>name</key>
+		<string>iPad Pro (Wi-Fi/Cellular)</string>
+	</dict>
+	<key>i386</key>
+	<dict>
+		<key>version</key>
+		<integer>-1</integer>
+		<key>name</key>
+		<string>Simulator</string>
+	</dict>
+	<key>x86_64</key>
+	<dict>
+		<key>CPU</key>
+		<string>A9 64-bit</string>
+		<key>screen_size</key>
+		<string>5.5&quot;</string>
+		<key>size</key>
+		<string>158.2 x 77.9 x 7.3</string>
+		<key>resolution</key>
+		<string>1 920 x 1 080</string>
+		<key>cam_front</key>
+		<string>5 Mpx</string>
+		<key>cam</key>
+		<string>12 Mpx</string>
+		<key>battery</key>
+		<string>2750 mAh</string>
+		<key>weight</key>
+		<string>192 g</string>
+		<key>version</key>
+		<integer>-1</integer>
+		<key>name</key>
+		<string>Simulator</string>
+	</dict>
+</dict>
+</plist>

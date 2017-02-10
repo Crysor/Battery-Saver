@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_gradient-Green" translatesAutoresizingMaskIntoConstraints="NO" id="8gE-k7-wOS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-screen_batterie" translatesAutoresizingMaskIntoConstraints="NO" id="yBz-kt-Xzh">
+                                <rect key="frame" x="154" y="262.5" width="66" height="142"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-screen_eclair" translatesAutoresizingMaskIntoConstraints="NO" id="y3P-kE-a8K">
+                                <rect key="frame" x="170.5" y="300.5" width="34" height="66"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yBz-kt-Xzh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="HTN-1p-pr5"/>
+                            <constraint firstAttribute="trailing" secondItem="8gE-k7-wOS" secondAttribute="trailing" id="Vfe-xq-hg0"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="8gE-k7-wOS" secondAttribute="bottom" id="WIR-7G-WWZ"/>
+                            <constraint firstItem="8gE-k7-wOS" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="X01-JO-vcA"/>
+                            <constraint firstItem="y3P-kE-a8K" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Xrm-vE-Hhb"/>
+                            <constraint firstItem="y3P-kE-a8K" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mB5-yO-Em7"/>
+                            <constraint firstItem="yBz-kt-Xzh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nU5-jw-uVc"/>
+                            <constraint firstItem="8gE-k7-wOS" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="tid-HO-LlA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_gradient-Green" width="375" height="667"/>
+        <image name="splash-screen_batterie" width="66" height="142"/>
+        <image name="splash-screen_eclair" width="34" height="66"/>
+    </resources>
+</document>
