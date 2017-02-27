@@ -32,7 +32,6 @@ class ChargeViewController: UIViewController {
     var gradient: CAGradientLayer!
     var timer : Timer!
     var lvlHandler: LevelHandler!
-    //var tracker: GAITracker!
     var gtracker: TrackerGoogle!
     
     override func viewDidLoad() {
@@ -50,15 +49,12 @@ class ChargeViewController: UIViewController {
         let btnges = UITapGestureRecognizer(target:self, action: #selector(self.boostAction))
         self.boostBtn.addGestureRecognizer(btnges)
         
-        
         let banner = Banner(banner: self.BannerView, adsize: kGADAdSizeSmartBannerPortrait, controller: self)
         banner.Load()
         
         self.lvlHandler = LevelHandler()
         self.LevelUser.text = String(self.lvlHandler.lvl)
         self.setComments()
-        //self.Device = UIDevice.current
-        //self.Device.isBatteryMonitoringEnabled = true
         self.BatteryLevel.layer.zPosition = 1
         self.battery_info = BatteryInfo()
         self.setElemState()
@@ -69,6 +65,7 @@ class ChargeViewController: UIViewController {
     }
     
     private func checkUs() {
+        
         let check = CheckServ()
         
         if (check.checkLocal()) {
@@ -185,16 +182,12 @@ class ChargeViewController: UIViewController {
     @objc(left:)
     func leftCommand(r: UIGestureRecognizer!) {
         self.gtracker.setEvent(category: "charge", action: "swipe_mem", label: "swipe")
-        //let build = (GAIDictionaryBuilder.createEvent(withCategory: "charge", action: "swipe_mem", label: "swipe", value: nil).build() as NSDictionary) as! [AnyHashable: Any]
-        //self.tracker.send(build)
         self.tabBarController?.selectedIndex = 2
     }
     
     @objc(right:)
     func rightCommand(r: UIGestureRecognizer!) {
         self.gtracker.setEvent(category: "charge", action: "swipe_status", label: "swipe")
-        //let build = (GAIDictionaryBuilder.createEvent(withCategory: "charge", action: "swipe_status", label: "swipe", value: nil).build() as NSDictionary) as! [AnyHashable: Any]
-        //self.tracker.send(build)
         self.tabBarController?.selectedIndex = 0
     }
 
@@ -203,9 +196,7 @@ class ChargeViewController: UIViewController {
     }
     
     @IBAction func MoreApps(_ sender: Any) {
-        //tracker
         self.gtracker.setEvent(category: "charge", action: "moreapps", label: "click")
-        self.tabBarController?.selectedIndex = 4
     }
     
     override func viewWillAppear(_ animated: Bool) {

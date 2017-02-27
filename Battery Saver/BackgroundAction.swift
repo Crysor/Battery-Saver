@@ -165,7 +165,7 @@ class BackgroundAction {
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
-        let highFiveRequestIdentifier = requestId//"sampleBatLowRequest"
+        let highFiveRequestIdentifier = requestId
         let highFiveRequest = UNNotificationRequest(identifier: highFiveRequestIdentifier, content: highFiveContent, trigger: trigger)
         center.add(highFiveRequest) { (error) in
             print("\(error)")

@@ -35,9 +35,6 @@ class MoreAppsCellView: UITableViewCell {
     
     @IBAction func getItApp(_ sender: Any) {
         
-        //TODO popup
-        print("get It \(self.getIt)")
-        
         if let url = self.getIt {
             
             if #available(iOS 10.0, *) {

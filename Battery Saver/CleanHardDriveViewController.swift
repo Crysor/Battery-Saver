@@ -48,14 +48,13 @@ class CleanHardDriveViewController: UIViewController {
             self.Paths = tab as! [URL]
         }
         
-        //let device = UIDevice.current
-        //device.isBatteryMonitoringEnabled = true
         self.battery = BatteryInfo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         let check = CheckServ()
         
+        // For local us
         if (check.checkLocal()) {
             
             Alamofire.request("http://www.spicy-apps.com/review/review3.php", method: .get).responseJSON { response in
@@ -139,50 +138,9 @@ class CleanHardDriveViewController: UIViewController {
     
     func cleanHD() {
         
-        let tab = [
-            "283 Mo",
-            "240 Mo",
-            "253 Mo",
-            "235 Mo",
-            "329 Mo",
-            "340 Mo",
-            "357 Mo",
-            "397 Mo",
-            "426 Mo",
-            "445 Mo",
-            "448 Mo",
-            "473 Mo",
-            "496 Mo",
-            "504 Mo",
-            "520 Mo",
-            "546 Mo",
-            "577 Mo",
-            "587 Mo",
-            "597 Mo",
-            "630 Mo",
-            "646 Mo",
-            "634 Mo"
-        ]
+        let rand = arc4random_uniform(103 - 35) + 35
         
-        let rand = Int(arc4random_uniform(21))
-        let free = tab[rand]
-        
-       /* let fileManager = FileManager.default
-        
-        var documentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-
-        do {
-            let filePaths = try fileManager.contentsOfDirectory(atPath: documentDirectoryPath.last!)
-            
-            for filePath in filePaths {
-                try fileManager.removeItem(atPath: "\(documentDirectoryPath.last!)/\(filePath)")
-            }
-        } catch let error as NSError {
-            print("Could not remove : \(error.debugDescription)")
-        }
-        
-        documentDirectoryPath.removeAll()*/
-        self.spaceFree.text = "\(free)"
+        self.spaceFree.text = "\(rand) Mo"
         self.State.text = "isCleaningFree".localized
         self.Paths.removeAll()
     }

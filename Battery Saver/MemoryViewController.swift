@@ -91,8 +91,6 @@ class MemoryViewController: UIViewController {
         self.gtracker = TrackerGoogle()
         self.gtracker.setScreenName(name: "Memory")
 
-        //let device = UIDevice.current
-        //device.isBatteryMonitoringEnabled = true
         self.battery = BatteryInfo()
         self.setupSwipeControls()
     }
@@ -240,12 +238,9 @@ class MemoryViewController: UIViewController {
             
             userdef.set(0, forKey: "tuto")
             userdef.synchronize()
-            self.tabBarController?.tabBar.mask = nil//UIView()
+            self.tabBarController?.tabBar.mask = nil
             self.tabBarController?.tabBar.isUserInteractionEnabled = true
         }
-        /*if (self.ratePopUp().1 == 1) {
-            self.present(self.ratePopUp().0, animated: true, completion: nil)
-        }*/
         
         self.tools = Tools()
         self.HDinfo = HardDriveHandler()
@@ -305,7 +300,6 @@ class MemoryViewController: UIViewController {
             self.MemoryCircle.circleLayer.strokeColor = color.green
         }
         
-        //self.MemoryCircle.circleLayer.strokeColor = UIColor(red: 105/255, green: 209/255, blue: 123/255, alpha: 1).cgColor
         self.MemoryCircle.circleLayer.lineWidth = 6.0
         let defCircleMem = Circle(frame: CGRect(x: 0, y: 0, width: circleWidth, height: circleHeight))
         defCircleMem.circleLayer.strokeColor = UIColor.init(red: 146/255, green: 148/255, blue: 153/255, alpha: 0.2).cgColor
@@ -353,8 +347,6 @@ class MemoryViewController: UIViewController {
         let message = "disclaimerText".localized
         let alert =  UIAlertController(title: "disclaimerTitle".localized, message: message, preferredStyle: .alert)
         let clean = UIAlertAction(title: "memoryClean".localized, style: .default, handler: { Void in
-            //let build = (GAIDictionaryBuilder.createEvent(withCategory: "memory", action: "clean", label: "click", value: nil).build() as NSDictionary) as! [AnyHashable: Any]
-            //self.tracker.send(build)
             self.gtracker.setEvent(category: "memory", action: "clean", label: "click")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "HDclean")
@@ -373,9 +365,7 @@ class MemoryViewController: UIViewController {
     }
     
     @IBAction func MoreApps(_ sender: Any) {
-        //tracker
         self.gtracker.setEvent(category: "memory", action: "moreapps", label: "click")
-        self.tabBarController?.selectedIndex = 4
     }
     
     @IBAction func BoostMemory(_ sender: AnyObject) {
@@ -385,7 +375,5 @@ class MemoryViewController: UIViewController {
         userdef.synchronize()
 
         self.gtracker.setEvent(category: "memory", action: "boost", label: "click")
-        //let build = (GAIDictionaryBuilder.createEvent(withCategory: "memory", action: "boost", label: "click", value: nil).build() as NSDictionary) as! [AnyHashable: Any]
-        //self.tracker.send(build)
     }
 }

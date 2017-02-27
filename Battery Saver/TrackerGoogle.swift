@@ -22,7 +22,7 @@ class TrackerGoogle {
     }
     
     func setScreenName(name: String) {
-        if (self.debug == false) {
+        if (!self.debug) {
             self.tracker?.set(kGAIScreenName , value: name)
             let build = (GAIDictionaryBuilder.createScreenView().build() as NSDictionary) as! [AnyHashable: Any]
             self.tracker?.send(build)
@@ -33,7 +33,7 @@ class TrackerGoogle {
     }
     
     func setEvent(category: String, action: String, label: String) {
-        if (self.debug == false) {
+        if (!self.debug) {
             let build = (GAIDictionaryBuilder.createEvent(withCategory: category, action: action, label: label, value: nil).build() as NSDictionary) as! [AnyHashable: Any]
             self.tracker.send(build)
         }

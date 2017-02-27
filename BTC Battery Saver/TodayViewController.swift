@@ -91,7 +91,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             self.upLoadSpeed.text = self.tools.formatSizeRoundUnits(bytes: self.networkInfo.getPhoneData(reset: false).3)+"/s"
             self.downLoadSpeed.text = self.tools.formatSizeRoundUnits(bytes: self.networkInfo.getPhoneData(reset: false).2)+"/s"
         }
-        //self.downLoadSpeed.text = self.tools.formatSizeRoundUnits(bytes: self.networkInfo.getWifiData(reset: false).2)+"/s"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -113,8 +112,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
         
         self.remaining.text = self.batteryInfo.toggleStatus().1
-        //if (self.batteryInfo.BatteryState().0) {
-        //}
     }
     
     @objc private func batteryLevel() {

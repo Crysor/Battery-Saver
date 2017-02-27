@@ -27,7 +27,7 @@ class DailyAppsViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var infoAppView: UIView!
     
     var urlRequest: String {
-        let local = Locale.current
+        //TODO: faire comme pour le more Apps
         return "http://api.supreme.media:8080/request/IOS/MegaApp/us/app_day"
     }
     
@@ -69,14 +69,12 @@ class DailyAppsViewController: UIViewController, UITableViewDelegate, UITableVie
         Alamofire.request(self.urlRequest, method: .get).responseJSON { response in
             
             if (response.result.isSuccess) {
-                print("y'a internet")
                 self.infoAppView.isHidden = false
                 self.descriptionView.isHidden = false
                 self.tableView.isHidden = false
                 self.load()
             }
             else {
-                print("y'a pas internet")
                 if let appName: String = self.cache.value(forKey: "appTitle") as! String? {
                     self.appTitle.text = appName
                 }
@@ -257,7 +255,6 @@ class DailyAppsViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBAction func getApp(_ sender: Any) {
         
          self.tableView.reloadData()
-        //popup fail connect
        /* if let url = self.storeLink {
             
             if #available(iOS 10.0, *) {

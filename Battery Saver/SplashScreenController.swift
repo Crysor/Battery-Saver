@@ -10,9 +10,6 @@ import UIKit
 
 class SplashScreenController: UIViewController {
     
-   /* @IBOutlet weak var battery: UIImageView!
-    @IBOutlet weak var flash: UIImageView!
-    @IBOutlet weak var back: UIImageView!*/
     @IBOutlet weak var back: UIImageView!
     @IBOutlet weak var battery: UIImageView!
     @IBOutlet weak var flash: UIImageView!

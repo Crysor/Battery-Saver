@@ -16,14 +16,12 @@ class MoreAppsViewController: UITableViewController {
     var items = [AppItem]()
     var gtracker: TrackerGoogle!
     var url_request: String {
-        //"http://api.supreme.media:8080/request/IOS/MegaApp/us/more_app"
         return "http://api.supreme.media:8080/request/IOS/Battery%20Saver/us/more_app"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //TODO: trad
         self.title = "More Apps"
         self.gtracker = TrackerGoogle()
         self.gtracker.setScreenName(name: "MoreApps")
@@ -33,32 +31,28 @@ class MoreAppsViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.showWaitOverlayWithText("Loading")
+        self.showWaitOverlay()
     }
+    
     
     @IBAction func backAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    // request to API
     func loadItems() {
         
-        //TODO: URL  IOS a la place "ANDROID" le local pour "us"
-        let local = String("\(Locale.current)".characters.prefix(2))
-        print("l \(local)")
         Alamofire.request(self.url_request, method: .get).responseJSON { response in
             
             if (response.result.isSuccess) {
-                print("success mdr")
                 self.removeAllOverlays()
             }
             else {
-                print("fail lol")
-                
-                
                 self.removeAllOverlays()
             }
             
             if let json = response.result.value {
+                self.removeAllOverlays()
                 let items = JSON(json)
             
                 for item in items {
@@ -73,6 +67,7 @@ class MoreAppsViewController: UITableViewController {
         }
     }
     
+    // table delegates
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         return CGFloat(100) //Choose your custom row height

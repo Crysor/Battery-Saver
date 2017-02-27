@@ -88,8 +88,6 @@ extension UIView {
     
     func layerGradient() -> CAGradientLayer {
         
-        //let device = UIDevice.current
-        //device.isBatteryMonitoringEnabled = true
         let lvl = BatteryInfo().BatteryLevel()
         
         let colors = colors_bg()

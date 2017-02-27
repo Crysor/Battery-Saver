@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
         let debug: Bool = false
         
-        if (debug == false) {
+        if (!debug) {
      
             //Kochava ------
             var initDictionary: [AnyHashable: Any] = [:]
@@ -75,21 +75,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         
-        print(" \(userInfo)")
-
         completionHandler(UIBackgroundFetchResult.newData)        
     }
     
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter,  willPresent notification: UNNotification, withCompletionHandler   completionHandler: @escaping (_ options:   UNNotificationPresentationOptions) -> Void) {
        
-        let json = JSON(notification.request.content.userInfo)
         completionHandler(UNNotificationPresentationOptions.alert)
     }
     
     @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         
+        // handle notification
         switch response.notification.request.identifier {
         case "sampleBatLowRequest":
             print("low")
@@ -109,14 +107,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         default:
             print("unknow action")
         }
-       
-        let json = JSON(response.notification.request.content.userInfo)
         
         completionHandler()
     }
     
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
-        //notification.de
+        
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

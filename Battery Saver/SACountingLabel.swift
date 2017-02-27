@@ -47,7 +47,6 @@ public class SACountingLabel: UILabel {
     
     public func countFrom(fromValue: Float, to toValue: Float, withDuration duration: TimeInterval, andAnimationType aType: AnimationType, andCountingType cType: CountingType) {
         
-        // Set values
         self.start = fromValue
         self.end = toValue
         self.duration = duration

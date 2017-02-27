@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lpx-bm-nw6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lpx-bm-nw6">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -667,6 +667,7 @@
                                 <state key="normal" image="ico_setting"/>
                                 <connections>
                                     <action selector="MoreApps:" destination="9pv-A4-QxB" eventType="touchUpInside" id="QqH-4a-B4H"/>
+                                    <segue destination="mdC-eg-ZJA" kind="show" id="svg-M0-nB3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -857,6 +858,7 @@
                                 <state key="normal" image="ico_setting"/>
                                 <connections>
                                     <action selector="MoreApps:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="bag-zv-FGt"/>
+                                    <segue destination="mdC-eg-ZJA" kind="show" id="WRG-Rd-uZ2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1126,6 +1128,7 @@
                                 <state key="normal" image="ico_setting"/>
                                 <connections>
                                     <action selector="MoreApps:" destination="Wgl-hO-1Oh" eventType="touchUpInside" id="ceK-Ea-3a0"/>
+                                    <segue destination="mdC-eg-ZJA" kind="show" id="lp5-9j-zgz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1728,6 +1731,7 @@
                                 <state key="normal" image="ico_setting"/>
                                 <connections>
                                     <action selector="MoreApps:" destination="eku-Uy-nTb" eventType="touchUpInside" id="F9u-m3-jUD"/>
+                                    <segue destination="mdC-eg-ZJA" kind="show" id="1ZA-wc-tx9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1880,7 +1884,7 @@
                                 <rect key="frame" x="8" y="65" width="304" height="267"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYf-La-3Kc">
-                                        <rect key="frame" x="50" y="15" width="70" height="70"/>
+                                        <rect key="frame" x="30" y="15" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="GmR-Ny-BPo"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="PvX-Fx-wOG"/>
@@ -1895,7 +1899,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLb-pp-Eif">
-                                        <rect key="frame" x="184" y="15" width="70" height="70"/>
+                                        <rect key="frame" x="204" y="15" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="mLb-pp-Eif" secondAttribute="height" multiplier="1:1" id="Yco-KX-jKy"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="ZLW-k1-6EU"/>
@@ -1907,7 +1911,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="System" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnz-No-8c1">
-                                        <rect key="frame" x="62.5" y="93" width="45" height="16"/>
+                                        <rect key="frame" x="42.5" y="93" width="45" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.41568627450000001" green="0.43529411759999997" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1920,7 +1924,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YF-FR-xav">
-                                        <rect key="frame" x="189" y="93" width="60" height="16"/>
+                                        <rect key="frame" x="209" y="93" width="60" height="16"/>
                                         <color key="backgroundColor" red="0.41710722449999998" green="0.43625122309999997" blue="0.48360538479999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="5vZ-rR-GDb"/>
@@ -1942,7 +1946,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aE-cT-2xI">
-                                        <rect key="frame" x="81" y="129" width="39" height="39"/>
+                                        <rect key="frame" x="61" y="129" width="39" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="39" id="6up-r5-uMe"/>
                                             <constraint firstAttribute="width" constant="39" id="EnR-jh-wrd"/>
@@ -1950,14 +1954,14 @@
                                         <state key="normal" title="Button" image="facebook"/>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGs-D1-Bjt">
-                                        <rect key="frame" x="184" y="129" width="39" height="39"/>
+                                        <rect key="frame" x="204" y="129" width="39" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="39" id="Hty-bE-J1X"/>
                                             <constraint firstAttribute="width" constant="39" id="g5g-5d-EvX"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="multimedia"/>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnM-HZ-j59">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnM-HZ-j59">
                                         <rect key="frame" x="117" y="15" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="EmP-s3-sNp"/>
@@ -1979,25 +1983,27 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="5vB-CI-DAG" secondAttribute="trailing" id="0Jw-cm-MPd"/>
+                                    <constraint firstItem="mLb-pp-Eif" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XnM-HZ-j59" secondAttribute="trailing" constant="17" id="5kM-a4-FW4"/>
                                     <constraint firstItem="1Db-uR-U06" firstAttribute="centerX" secondItem="XnM-HZ-j59" secondAttribute="centerX" id="6LB-VO-4IX"/>
                                     <constraint firstAttribute="bottom" secondItem="5vB-CI-DAG" secondAttribute="bottom" id="8uU-eK-PIS"/>
                                     <constraint firstItem="YGs-D1-Bjt" firstAttribute="top" secondItem="1YF-FR-xav" secondAttribute="bottom" constant="20" id="9c7-IE-XsL"/>
                                     <constraint firstItem="YGs-D1-Bjt" firstAttribute="leading" secondItem="mLb-pp-Eif" secondAttribute="leading" id="B1J-U3-NZR"/>
                                     <constraint firstItem="2aE-cT-2xI" firstAttribute="top" secondItem="tnz-No-8c1" secondAttribute="bottom" constant="20" id="F4z-8x-ige"/>
                                     <constraint firstItem="Llc-VB-2iU" firstAttribute="top" secondItem="aua-GE-aBI" secondAttribute="top" constant="23" id="Hch-87-oQh"/>
+                                    <constraint firstAttribute="trailing" secondItem="mLb-pp-Eif" secondAttribute="trailing" constant="30" id="Jkx-nv-8eh"/>
                                     <constraint firstItem="5vB-CI-DAG" firstAttribute="centerX" secondItem="aua-GE-aBI" secondAttribute="centerX" id="Kb1-Of-ejk"/>
                                     <constraint firstItem="1YF-FR-xav" firstAttribute="centerX" secondItem="mLb-pp-Eif" secondAttribute="centerX" id="Q6Z-HM-y4d"/>
                                     <constraint firstAttribute="width" secondItem="aua-GE-aBI" secondAttribute="height" multiplier="359:315" id="TPE-gn-3LA"/>
-                                    <constraint firstAttribute="trailing" secondItem="mLb-pp-Eif" secondAttribute="trailing" constant="50" id="WvF-Du-ZEd"/>
                                     <constraint firstItem="mLb-pp-Eif" firstAttribute="height" secondItem="RYf-La-3Kc" secondAttribute="height" id="XcK-pM-3qg"/>
                                     <constraint firstItem="mLb-pp-Eif" firstAttribute="top" secondItem="aua-GE-aBI" secondAttribute="top" constant="15" id="YfE-Pp-6na"/>
                                     <constraint firstItem="mLb-pp-Eif" firstAttribute="width" secondItem="RYf-La-3Kc" secondAttribute="width" id="YqT-af-otQ"/>
+                                    <constraint firstItem="RYf-La-3Kc" firstAttribute="leading" secondItem="aua-GE-aBI" secondAttribute="leading" constant="30" id="a4Q-dY-gec"/>
                                     <constraint firstItem="tnz-No-8c1" firstAttribute="top" secondItem="RYf-La-3Kc" secondAttribute="bottom" constant="8" id="bQA-IF-nKR"/>
                                     <constraint firstItem="5vB-CI-DAG" firstAttribute="leading" secondItem="aua-GE-aBI" secondAttribute="leading" id="cwf-ig-kWE"/>
                                     <constraint firstItem="Llc-VB-2iU" firstAttribute="centerX" secondItem="aua-GE-aBI" secondAttribute="centerX" id="d5o-Xk-fc0"/>
                                     <constraint firstItem="XnM-HZ-j59" firstAttribute="centerX" secondItem="aua-GE-aBI" secondAttribute="centerX" id="fD0-3B-vkW"/>
+                                    <constraint firstItem="XnM-HZ-j59" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RYf-La-3Kc" secondAttribute="trailing" constant="17" id="fDA-ey-rvK"/>
                                     <constraint firstItem="2aE-cT-2xI" firstAttribute="trailing" secondItem="RYf-La-3Kc" secondAttribute="trailing" id="g2Q-gT-5Pw"/>
-                                    <constraint firstItem="RYf-La-3Kc" firstAttribute="leading" secondItem="aua-GE-aBI" secondAttribute="leading" constant="50" id="jNX-2t-gcH"/>
                                     <constraint firstItem="XnM-HZ-j59" firstAttribute="top" secondItem="aua-GE-aBI" secondAttribute="top" constant="15" id="mEY-JR-cPF"/>
                                     <constraint firstItem="RYf-La-3Kc" firstAttribute="top" secondItem="aua-GE-aBI" secondAttribute="top" constant="15" id="ngz-j4-ScB"/>
                                     <constraint firstItem="tnz-No-8c1" firstAttribute="centerX" secondItem="RYf-La-3Kc" secondAttribute="centerX" id="p8v-4i-qKu"/>
@@ -2442,6 +2448,7 @@
         <image name="star" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bnf-uE-oiY"/>
+        <segue reference="g1R-a6-fWp"/>
+        <segue reference="4OL-kd-N7O"/>
     </inferredMetricsTieBreakers>
 </document>

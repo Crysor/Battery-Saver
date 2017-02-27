@@ -44,7 +44,6 @@ class CleanMemoryViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         
         self.titlePage.text = "regPageMemory".localized
-        //self.cleaningState.text = "statusListBoost".localized
         self.btn.setTitle("isCleaningCancel".localized, for: .normal)
         self.labelMemUse.text = "isCleaningMemoryUse".localized
         self.labelTimeGained.text = "isCleaningTimegained".localized
@@ -60,8 +59,6 @@ class CleanMemoryViewController: UIViewController, UITableViewDelegate, UITableV
         self.lvl = LevelHandler()
         self.tab = [ItemTab]()
         self.animatedImg.loadGif(name: "gifAnime")
-        //let device = UIDevice.current
-        //device.isBatteryMonitoringEnabled = true
         self.battery = BatteryInfo()
         self.tools = Tools()
         self.setItems()
@@ -71,6 +68,7 @@ class CleanMemoryViewController: UIViewController, UITableViewDelegate, UITableV
         
         let check = CheckServ()
         
+        // For local us
         if (check.checkLocal()) {
             
             Alamofire.request("http://www.spicy-apps.com/review/review3.php", method: .get).responseJSON { response in
@@ -144,8 +142,6 @@ class CleanMemoryViewController: UIViewController, UITableViewDelegate, UITableV
     
   @objc private func animatedCleanTab() {
     
-        //var i = 0
-    
         if (CleanMemoryViewController.i > 7) {
             self.animationView.isHidden = true
             return
@@ -166,11 +162,7 @@ class CleanMemoryViewController: UIViewController, UITableViewDelegate, UITableV
     private func startCleaning() {
        
 
-        //self.animatedCleanTab()
-
-        //let Min = htab[rand]
-        
-        self.timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(animatedCleanTab), userInfo: nil, repeats: true)        
+        self.timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(animatedCleanTab), userInfo: nil, repeats: true)
         
         let circleWidth = self.circleView.frame.width + 4
         let circleHeight = self.circleView.frame.height + 4

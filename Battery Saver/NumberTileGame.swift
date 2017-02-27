@@ -189,7 +189,6 @@ class NumberTileGameViewController : UIViewController, GameModelProtocol {
     }
 
     // Create controlls view
-    //let controllView = ControlView(backgroundColor: UIColor.init(red: 191/255, green: 176/255, blue: 157/255, alpha: 1), radius: 6, width: self.view.frame.size.width, height: self.view.frame.size.height)
     let controllView = ControlView(backgroundColor: UIColor.init(red: 191/255, green: 176/255, blue: 157/255, alpha: 1), radius: 6, width: self.view.bounds.width, height: self.view.bounds.height)
     controllView.quitGame.addTarget(self, action: #selector(NumberTileGameViewController.quitGame), for: .touchUpInside)
     controllView.resetGame.addTarget(self, action: #selector(NumberTileGameViewController.restart), for: .touchUpInside)
@@ -319,9 +318,6 @@ class NumberTileGameViewController : UIViewController, GameModelProtocol {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "MainCtrl")
             self.present(controller, animated: true, completion: nil)
-            //self.dismiss(animated: true, completion: nil)
-            //self.ctrl.present(controller, animated: true, completion: nil)
-            //self.dismiss(animated: true, completion: nil)
         })
         alert.addAction(res)
         alert.addAction(quit)

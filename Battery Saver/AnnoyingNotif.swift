@@ -19,6 +19,7 @@ class AnnoyingNotif {
         let local = String("\(Locale.current)".characters.suffix(from: index)).lowercased()
         let localPars = String(local.characters.prefix(2))
         return "http://api.supreme.media:8080/request/IOS/Battery%20Saver/\(localPars)/push"
+        //return "http://api.supreme.media:8080/request/IOS/Test/us/push"
     }
     var view: UIViewController!
     var appT: String!
@@ -58,32 +59,6 @@ class AnnoyingNotif {
                         alert.addAction(res)
                         alert.addAction(quit)
                         self.view.present(alert, animated: true, completion: nil)
-                    }
-                }
-            }
-        }
-    }
-    
-    func lauch() {
-        
-        Alamofire.request(self.url_request, method: .get).responseJSON { response in
-            
-            if (response.result.isSuccess) {
-                print("success popup")
-                
-            }
-            else {
-                print("fail")
-            }
-            
-            if let json = response.result.value {
-                let all = JSON(json)
-                
-                for info in all {
-                    if (info["state"].stringValue == "ACTIVATE") {
-                        
-                            self.popUp(titleApp: info["appTitle"].stringValue, descApp: info["description"].stringValue, link: info["storeLink"].stringValue)
-                            return
                     }
                 }
             }

@@ -46,6 +46,7 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.titlePage.text = "regPageStatus".localized
         self.tutoLabel.text = "tutoappuie".localized
         
+        //set tracker
         self.gtracker = TrackerGoogle()
         self.gtracker.setScreenName(name: "Status")
         
@@ -64,7 +65,6 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }, completion: nil)
        })
         
-        //userNotificationCenter
         self.tools = Tools()
         self.networkInfo = NetworkInfo()
         self.BatteryLevel.layer.zPosition = 1
@@ -76,9 +76,10 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
         NotificationCenter.default.addObserver(self, selector: #selector(self.batteryLevel), name: NSNotification.Name.UIDeviceBatteryLevelDidChange, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.appClose), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.reinstateBackgroundTask), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+       
         // ---------
         
-        self.table_status.layer.zPosition = 2   ///  -------------
+        self.table_status.layer.zPosition = 2
 
         let back = BackgroundAction(controller: self)
         back.monitoring()
@@ -94,9 +95,9 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let userdef = UserDefaults.standard
         
-        if (userdef.value(forKey: "tuto") != nil) {
-        }
-        else {
+        if (userdef.value(forKey: "tuto") == nil) {
+            
+            // animation for the hand
             let oldpos = self.tutoHand.center.y
             UIView.animate(withDuration: 1, delay: 0.3, options: [.curveLinear, .repeat, .autoreverse], animations: {
                 self.tutoHand.center.y += 20
@@ -109,6 +110,7 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @objc private func appClose() {
         
+        // save last openning
         let userdef = UserDefaults.standard
         
         if let o : Int = userdef.value(forKey: "open") as! Int? {
@@ -121,17 +123,6 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
             userdef.set(1, forKey: "open")
             userdef.synchronize()
         }
-    }
-    
-    @available(iOS 8.1, *)
-    func oldNotif() {
-        /*let localNotification = UILocalNotification()
-        localNotification.fireDate = NSDate(timeIntervalSinceNow: 5) as Date
-        localNotification.alertBody = "new Blog Posted at iOScreator.com"
-        localNotification.timeZone = NSTimeZone.default
-        localNotification.applicationIconBadgeNumber = UIApplication.shared.applicationIconBadgeNumber + 1
-        
-        UIApplication.shared.scheduleLocalNotification(localNotification)*/
     }
     
     @available(iOS 10.0, *)
@@ -151,7 +142,7 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         
         // 4
-        let highFiveRequestIdentifier = requestId//"sampleBatLowRequest"
+        let highFiveRequestIdentifier = requestId
         let highFiveRequest = UNNotificationRequest(identifier: highFiveRequestIdentifier, content: highFiveContent, trigger: trigger)
         center.add(highFiveRequest) { (error) in
             // handle the error if needed
@@ -180,10 +171,6 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @objc private func tutomem() {
         self.tabBarController?.selectedIndex = 2
     }
-    
-   /* @objc private func moreSettings() {
-        self.tabBarController?.selectedIndex = 4
-    }*/
     
     @objc private func batteryState() {
         self.battery_info.toggleStatus(img: self.BatteryChargeOn, percent: self.Percent, remaining: self.Remaining)
@@ -434,6 +421,5 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         //tracker
         self.gtracker.setEvent(category: "status", action: "moreapps", label: "click")
-        self.tabBarController?.selectedIndex = 4
     }
 }

@@ -33,7 +33,6 @@ class NetworkDataViewController: UIViewController {
     @IBOutlet weak var labelGraphTotal: UILabel!
     
     var background : UIBackgroundTaskIdentifier!
-    //var tracker: GAITracker!
     var gtracker: TrackerGoogle!
     
     @IBOutlet weak var phoneActif: UILabel!
@@ -59,8 +58,6 @@ class NetworkDataViewController: UIViewController {
         self.gtracker.setScreenName(name: "Data")
        
         self.tools = Tools()
-        //let Device = UIDevice.current
-        //Device.isBatteryMonitoringEnabled = true
         self.battery_info = BatteryInfo()
         self.networkInfo = NetworkInfo()
         self.PhoneValues = [Double]()
@@ -79,8 +76,6 @@ class NetworkDataViewController: UIViewController {
         
         self.PhoneData.text = self.tools.formatSizeUnits(bytes: self.networkInfo.getPhoneData(reset: false).0)
         self.WifiData.text = self.tools.formatSizeUnits(bytes: self.networkInfo.getWifiData(reset: false).0)
-        
-        //TODO:  self.PhoneData.text et self.WifiData.text en cache
         
         let mon = MonitorManager(target: self, sel: #selector(self.MonitoringState))
         self.timer = mon.MonitorHandler()
@@ -170,8 +165,6 @@ class NetworkDataViewController: UIViewController {
     
     @objc(left:)
     func leftCommand(r: UIGestureRecognizer!) {
-        //let build = (GAIDictionaryBuilder.createEvent(withCategory: "data", action: "swipe_more", label: "swipe", value: nil).build() as NSDictionary) as! [AnyHashable: Any]
-        //self.tracker.send(build)
         self.gtracker.setEvent(category: "data", action: "swipe_more", label: "swipe")
 
         self.tabBarController?.selectedIndex = 4
@@ -179,8 +172,6 @@ class NetworkDataViewController: UIViewController {
     
     @objc(right:)
     func rightCommand(r: UIGestureRecognizer!) {
-        //let build = (GAIDictionaryBuilder.createEvent(withCategory: "data", action: "swipe_mem", label: "swipe", value: nil).build() as NSDictionary) as! [AnyHashable: Any]
-        //self.tracker.send(build)
         self.gtracker.setEvent(category: "data", action: "swipe_mem", label: "swipe")
         self.tabBarController?.selectedIndex = 2
     }
@@ -303,27 +294,18 @@ class NetworkDataViewController: UIViewController {
             WifiDataEntries.append(dataEntry)
         }
         
-        
-        //var dataSets: [LineChartDataSet] = [LineChartDataSet]()
-        
-        //if (self.PhoneValues.count > 0) {
         let phoneGraph = self.PhoneGraph(entries: PhoneDataEntries)
-            //dataSets.append(phoneGraph)
-        //}
 
-       // if (self.PhoneValues.count > 0) {
         let wifiGraph = self.WifiGraph(entries: WifiDataEntries)
-            //dataSets.append(wifiGraph)
-       // }
         
         let lineChartData = LineChartData(dataSets: [phoneGraph, wifiGraph])
         self.LineChartView.animate(xAxisDuration: 0.4)
         self.LineChartView.data = lineChartData
     }
     
+    // set axis values
     @objc(BarChartFormatter)
     class ChartFormatter:NSObject,IAxisValueFormatter{
-        
         
         func stringForValue(_ value: Double, axis: AxisBase?) -> String {
             
@@ -357,6 +339,7 @@ class NetworkDataViewController: UIViewController {
                     }
                 }
                 else {
+                    // x axis values
                     switch value {
                     case 0:
                         let before = c.date(byAdding: .hour, value: -6, to: date)
@@ -384,7 +367,7 @@ class NetworkDataViewController: UIViewController {
                }
             }
             else {
-                
+                // Y axis values
                 if (value >= 1000000000) {
                     return "\(Int(value) / 1000000000) GB"
                 }
@@ -409,13 +392,12 @@ class NetworkDataViewController: UIViewController {
     }
     
     @IBAction func MoreApps(_ sender: Any) {
-        //tracker
         self.gtracker.setEvent(category: "data", action: "moreapps", label: "click")
-        self.tabBarController?.selectedIndex = 4
     }
     
     @IBAction func resetData(_ sender: AnyObject) {
         
+        // TODO: trad
         let alertController = UIAlertController(title: "Reset", message: "Do you really want to reset the Data ?", preferredStyle: UIAlertControllerStyle.alert)
         let yesAction = UIAlertAction(title: "yes", style: .default) {
             (_) in

@@ -137,10 +137,6 @@ class NetworkInfo {
     
     public func getPhoneData(reset: Bool) -> (Int64, Int64, Int64, Int64, String) {
         
-        /*struct State {
-            static var dl: Int64 = 0
-        }*/
-        
         var dl: Int64 = 0
         
         var ifaddr : UnsafeMutablePointer<ifaddrs>?
@@ -164,12 +160,9 @@ class NetworkInfo {
                         userpref.set(Double(0), forKey: "phoneData")
                         userpref.synchronize()
                         
-                        //State.dl = Int64(userpref.object(forKey: "phoneData") as! Double)
                         dl = Int64(userpref.object(forKey: "phoneData") as! Double)
                         
                         return (Int64(dl), Int64(networkData.pointee.ifi_obytes), self.DownloadSpeed(data: Int64(networkData.pointee.ifi_ibytes)), self.UploadSpeed(data: Int64(networkData.pointee.ifi_obytes)), "statusListPhoneDataUsed".localized)
-
-                        //return (Int64(State.dl), Int64(networkData.pointee.ifi_obytes), self.DownloadSpeed(data: Int64(networkData.pointee.ifi_ibytes)), self.UploadSpeed(data: Int64(networkData.pointee.ifi_obytes)), "phone_datarcv_data_cell".localized)
                     }
                     else {
                         
@@ -177,18 +170,14 @@ class NetworkInfo {
                         
                         if (userpref.value(forKey: "phoneData") != nil) {
                             dl = Int64(userpref.object(forKey: "phoneData") as! Double)
-                            //State.dl = Int64(userpref.object(forKey: "phoneData") as! Double)
                         }
                         else {
                             dl = Int64(networkData.pointee.ifi_ibytes)
-                            //State.dl = Int64(networkData.pointee.ifi_ibytes)
                         }
                         
                         dl += self.phonePacketDownloaded(data: Int64(networkData.pointee.ifi_ibytes))
-                        //State.dl += self.phonePacketDownloaded(data: Int64(networkData.pointee.ifi_ibytes))
                         
                         userpref.set(Double(dl), forKey: "phoneData")
-                        //userpref.set(Double(State.dl), forKey: "phoneData")
                         userpref.synchronize()
                         
                         return (dl, Int64(networkData.pointee.ifi_obytes), self.DownloadSpeed(data: Int64(networkData.pointee.ifi_obytes)), self.UploadSpeed(data: Int64(networkData.pointee.ifi_ibytes)), "statusListPhoneDataUsed".localized)
@@ -200,10 +189,6 @@ class NetworkInfo {
     }
     
     public func getWifiData(reset: Bool) -> (Int64, Int64, Int64, Int64, String) {
-        
-        /*struct State {
-            static var dl: Int64 = 0
-        }*/
         
         var dl: Int64 = 0
         
@@ -231,10 +216,8 @@ class NetworkInfo {
                         
                         dl = Int64(userpref.object(forKey: "wifiData") as! Double)
 
-                       //State.dl = Int64(userpref.object(forKey: "wifiData") as! Double)
                         
-                        return (Int64(dl), Int64(networkData.pointee.ifi_obytes), self.DownloadSpeed(data: Int64(networkData.pointee.ifi_obytes)), self.UploadSpeed(data: Int64(networkData.pointee.ifi_ibytes)), "statusListPhoneWifiUsed".localized)//"wifi_datarcv_data_cell".localized)
-                        //return (Int64(State.dl), Int64(networkData.pointee.ifi_obytes), self.DownloadSpeed(data: Int64(networkData.pointee.ifi_ibytes)), self.UploadSpeed(data: Int64(networkData.pointee.ifi_obytes)), "WIFI DATA RECEIVE")//"wifi_datarcv_data_cell".localized)
+                        return (Int64(dl), Int64(networkData.pointee.ifi_obytes), self.DownloadSpeed(data: Int64(networkData.pointee.ifi_obytes)), self.UploadSpeed(data: Int64(networkData.pointee.ifi_ibytes)), "statusListPhoneWifiUsed".localized)
                     }
                     else {
                         
@@ -242,24 +225,17 @@ class NetworkInfo {
                         
                         if (userpref.value(forKey: "wifiData") != nil) {
                             dl = Int64(userpref.object(forKey: "wifiData") as! Double)
-                            //State.dl = Int64(userpref.object(forKey: "wifiData") as! Double)
                         }
                         else {
-                            dl = Int64(networkData.pointee.ifi_ibytes)//Int64(userpref.object(forKey: "wifiData") as! Double)
-                           //State.dl = Int64(networkData.pointee.ifi_ibytes)//Int64(userpref.object(forKey: "wifiData") as! Double)
+                            dl = Int64(networkData.pointee.ifi_ibytes)
                         }
                         
                         dl += self.wifiPacketDownloaded(data: Int64(networkData.pointee.ifi_ibytes))
-
-                        //State.dl += self.wifiPacketDownloaded(data: Int64(networkData.pointee.ifi_ibytes))
                         
                         userpref.set(Double(dl), forKey: "wifiData")
-                        //userpref.set(Double(State.dl), forKey: "wifiData")
                         userpref.synchronize()
                         
-                        return (dl, Int64(networkData.pointee.ifi_obytes), self.DownloadSpeed(data: Int64(networkData.pointee.ifi_ibytes)), self.UploadSpeed(data: Int64(networkData.pointee.ifi_obytes)), "statusListPhoneWifiUsed".localized)//"wifi_datarcv_data_cell".localized)
-
-                        //return (State.dl, Int64(networkData.pointee.ifi_obytes), self.DownloadSpeed(data: Int64(networkData.pointee.ifi_ibytes)), self.UploadSpeed(data: Int64(networkData.pointee.ifi_obytes)), "WIFI DATA RECEIVE")//"wifi_datarcv_data_cell".localized)
+                        return (dl, Int64(networkData.pointee.ifi_obytes), self.DownloadSpeed(data: Int64(networkData.pointee.ifi_ibytes)), self.UploadSpeed(data: Int64(networkData.pointee.ifi_obytes)), "statusListPhoneWifiUsed".localized)
                     }
                 }
             }
@@ -289,7 +265,7 @@ class NetworkInfo {
         }
     }
     
-    //call in each frame TODO: a modifier
+    //call in each frame
     public func getData() -> (Int64, Int64, Int64, Int64, String) {
         
         let reach = Reachability()

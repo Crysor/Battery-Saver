@@ -34,7 +34,6 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         self.titlePage.text = "regPageMore".localized
         
-        //TODO: Trad
         self.playBtn.setTitle("morePlay".localized, for: .normal)
         self.labelSystem.text = "moreSystem".localized
         self.labelMoreApps.text = "More Apps"
@@ -78,7 +77,7 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
         mailComposerVC.mailComposeDelegate = self
         
         mailComposerVC.setToRecipients(["support@spicy-apps.com"])
-        mailComposerVC.setSubject("\(self.device.Model)/\(self.device.Version)/Battery Life") // TODO
+        mailComposerVC.setSubject("\(self.device.Model)/\(self.device.Version)/Battery Life")
         mailComposerVC.setMessageBody("", isHTML: false)
         
         return mailComposerVC
@@ -102,8 +101,6 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
     @objc(right:)
     func rightCommand(r: UIGestureRecognizer!) {
         self.gtracker.setEvent(category: "more", action: "swipe_data", label: "swipe")
-        //let build = (GAIDictionaryBuilder.createEvent(withCategory: "more", action: "swipe_data", label: "swipe", value: nil).build() as NSDictionary) as! [AnyHashable: Any]
-        //self.tracker.send(build)
         self.tabBarController?.selectedIndex = 3
     }
     
@@ -159,7 +156,6 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func System(_ sender: Any) {
         
         self.gtracker.setEvent(category: "more", action: "system", label: "click")
-
     }
     
     @IBAction func runGame(_ sender: AnyObject) {
@@ -230,18 +226,11 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func DailyApp(_ sender: Any) {
         
         self.gtracker.setEvent(category: "more", action: "dailyapps", label: "click")
-
-        //self.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
-        //self.navigationItem.leftItemsSupplementBackButton = true
     }
     
     @IBAction func MoreApps(_ sender: Any) {
         self.gtracker.setEvent(category: "more", action: "moreapps", label: "click")
     }
-    
-   /* @IBAction func MoreApps(_ sender: Any) {
-        self.gtracker.setEvent(category: "more", action: "moreapps", label: "click")
-    }*/
     
     @objc private func share() {
 

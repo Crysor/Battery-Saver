@@ -8,22 +8,6 @@
 
 import UIKit
 
-extension UITabBarController {
-    
-    func tuto() -> (Bool,  CALayer) {
-        
-        //TODO check userdefault
-        let mask = CALayer()
-        mask.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        mask.backgroundColor = UIColor.black.cgColor
-        mask.opacity = 0.5
-        
-        self.view.layer.mask = mask
-        
-        return (true, mask)
-    }
-}
-
 class CustomTabBar: UITabBarController, UITabBarControllerDelegate {
     
     @IBOutlet var gesture: UISwipeGestureRecognizer!
@@ -75,17 +59,4 @@ class CustomTabBar: UITabBarController, UITabBarControllerDelegate {
         default:break
         }
     }
-    
-    /*public func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        
-        let fromView: UIView = tabBarController.selectedViewController!.view
-        let toView  : UIView = viewController.view
-        if fromView == toView {
-            return false
-        }
-        
-        UIView.transition(from: fromView, to: toView, duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve) { (finished:Bool) in
-        }
-        return true
-    }*/
 }

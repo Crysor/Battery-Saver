@@ -10,62 +10,23 @@ import Foundation
 import UIKit
 
 class DeviceInfo {
-    //var Device: UIDevice!
+    
     internal var Model: String {
-        get {
-            return  DeviceGuru.hardwareDescription()!
-        }
-        set (newval){
-        }
+        return  DeviceGuru.hardwareDescription()!
     }
+    
     internal var Version: String {
-        get {
-            let Device = UIDevice.current
-            Device.isBatteryMonitoringEnabled = true
+        let Device = UIDevice.current
+        Device.isBatteryMonitoringEnabled = true
             
-            return Device.systemVersion
-        }
-        set(newVal) {
-           //self.Version = newVal
-        }
+        return Device.systemVersion
     }
+    
     internal var Name: String {
-        get {
-            let Device = UIDevice.current
-            Device.isBatteryMonitoringEnabled = true
+        let Device = UIDevice.current
+        Device.isBatteryMonitoringEnabled = true
             
-            return Device.name
-        }
-        set(newVal) {
-            //self.Name = newVal
-        }
-    }
-    
-    /*internal var Hardware: [String: String] {
-        get {
-            return self.Hardware
-        }
-        set (newVal) {
-            self.Hardware = newVal
-        }
-    }*/
-    
-    internal var IPaddr: String {
-        get {
-            return ""
-        }
-        set (newVal) {
-            //self.IPaddr = newVal
-        }
-    }
-    
-    internal var carrierName: String {
-        get {
-            return ""
-        }
-        set (newVal) {
-            //self.carrierName = newVal
-        }
+        return Device.name
     }
     
     init(){
